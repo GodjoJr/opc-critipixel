@@ -84,9 +84,9 @@ final class VideoGameFixtures extends Fixture implements DependentFixtureInterfa
                     ->setComment($i === 0 ? $this->faker->sentence() : null);
 
 
-                $videoGame->getReviews()->add($review);
-
-                $manager->persist($review);
+                    $manager->persist($review);
+                    
+                    $videoGame->getReviews()->add($review);
             }
 
             $this->calculateAverageRating->calculateAverage($videoGame);

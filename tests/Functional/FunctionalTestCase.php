@@ -18,6 +18,17 @@ abstract class FunctionalTestCase extends WebTestCase
     {
         parent::setUp();
         $this->client = static::createClient();
+        $this->client->disableReboot();
+    }
+
+    protected function tearDown(): void
+    {
+        // On s'assure de fermer proprement l'EntityManager avant que DAMA ne fasse le ROLLBACK.
+        if (isset($this->client)) {
+            $this->getEntityManager()->close();
+        }
+
+        parent::tearDown();
     }
 
     protected function getEntityManager(): EntityManagerInterface

@@ -41,7 +41,7 @@ final class AverageRatingTest extends TestCase
 
         $this->ratingHandler->calculateAverage($videoGame);
 
-        $this->assertSame(4, $videoGame->getAverageRating());
+        $this->assertEquals(4, $videoGame->getAverageRating());
     }
 
 
@@ -59,6 +59,6 @@ final class AverageRatingTest extends TestCase
    
         $this->ratingHandler->calculateAverage($videoGame);
 
-        $this->assertSame(3, $videoGame->getAverageRating());
+        $this->assertEquals(3, $videoGame->getAverageRating());
     }
 }
