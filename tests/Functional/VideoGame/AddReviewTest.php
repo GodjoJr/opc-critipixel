@@ -95,7 +95,9 @@ final class AddReviewTest extends FunctionalTestCase
         $crawler = $this->get('/' . $videoGame->getSlug());
 
         $form = $crawler->filter('form[name="review"]')->form();
-        $form['review[rating]']->disableValidation();
+        $ratingField = $form['review[rating]'];
+        assert($ratingField instanceof \Symfony\Component\DomCrawler\Field\ChoiceFormField);
+        $ratingField->disableValidation();
         $form['review[rating]'] = '6';
         $form['review[comment]'] = 'Test note hors limite';
 
@@ -116,8 +118,11 @@ final class AddReviewTest extends FunctionalTestCase
 
         $crawler = $this->get('/' . $videoGame->getSlug());
 
+
         $form = $crawler->filter('form[name="review"]')->form();
-        $form['review[rating]']->disableValidation();
+        $ratingField = $form['review[rating]'];
+        assert($ratingField instanceof \Symfony\Component\DomCrawler\Field\ChoiceFormField);
+        $ratingField->disableValidation();
         $form['review[rating]'] = '6';
         $form['review[comment]'] = $uniqueComment;
 

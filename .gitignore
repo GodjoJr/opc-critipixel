@@ -23,3 +23,6 @@ php.local.ini
 
 
 .env.test
+###> phpstan/phpstan ###
+phpstan.neon
+###< phpstan/phpstan ###

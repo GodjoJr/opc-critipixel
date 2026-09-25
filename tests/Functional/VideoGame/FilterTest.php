@@ -10,6 +10,7 @@ use App\Tests\Functional\FunctionalTestCase;
 final class FilterTest extends FunctionalTestCase
 {
 
+
     public static function provideTagCases(): iterable
     {
         yield 'aucun tag' => [

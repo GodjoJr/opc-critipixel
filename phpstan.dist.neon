@@ -1,0 +1,18 @@
+includes:
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+
+parameters:
+    level: 6
+    paths:
+        - tests
+        - config/
+        - src/
+    excludePaths:
+        - tests/**/vendor/*
+    ignoreErrors:
+        -
+            identifier: missingType.iterableValue
+            path: tests/*
+        -
+            identifier: function.alreadyNarrowedType
+            path: tests/bootstrap.php

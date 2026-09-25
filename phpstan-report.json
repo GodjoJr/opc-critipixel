@@ -1,0 +1,212 @@
+{
+    "totals": {
+        "errors": 0,
+        "file_errors": 25
+    },
+    "files": {
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/Controller/VideoGameController.php": {
+            "errors": 1,
+            "messages": [
+                {
+                    "message": "Parameter #1 $user of method App\\Model\\Entity\\Review::setUser() expects App\\Model\\Entity\\User, Symfony\\Component\\Security\\Core\\User\\UserInterface|null given.",
+                    "line": 45,
+                    "ignorable": true,
+                    "identifier": "argument.type"
+                }
+            ]
+        },
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/Doctrine/DataFixtures/UserFixtures.php": {
+            "errors": 3,
+            "messages": [
+                {
+                    "message": "Parameter #3 $callback of function array_fill_callback expects callable(int): array, Closure(int): App\\Model\\Entity\\User given.",
+                    "line": 14,
+                    "ignorable": true,
+                    "identifier": "argument.type"
+                },
+                {
+                    "message": "Unable to resolve the template type T in call to function array_fill_callback",
+                    "line": 14,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-template-type",
+                    "identifier": "argument.templateType"
+                },
+                {
+                    "message": "Parameter #2 $callback of function array_walk expects callable(array, int): mixed, array{Doctrine\\Persistence\\ObjectManager, 'persist'} given.",
+                    "line": 20,
+                    "ignorable": true,
+                    "identifier": "argument.type"
+                }
+            ]
+        },
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/Doctrine/DataFixtures/VideoGameFixtures.php": {
+            "errors": 8,
+            "messages": [
+                {
+                    "message": "Parameter #3 $callback of function array_fill_callback expects callable(int): array, Closure(int): App\\Model\\Entity\\VideoGame given.",
+                    "line": 50,
+                    "ignorable": true,
+                    "identifier": "argument.type"
+                },
+                {
+                    "message": "Unable to resolve the template type T in call to function array_fill_callback",
+                    "line": 50,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-error-unable-to-resolve-template-type",
+                    "identifier": "argument.templateType"
+                },
+                {
+                    "message": "Cannot call method getTags() on array.",
+                    "line": 65,
+                    "ignorable": true,
+                    "identifier": "method.nonObject"
+                },
+                {
+                    "message": "Parameter #2 $callback of function array_walk expects callable(array, int): mixed, array{Doctrine\\Persistence\\ObjectManager, 'persist'} given.",
+                    "line": 69,
+                    "ignorable": true,
+                    "identifier": "argument.type"
+                },
+                {
+                    "message": "Parameter #1 $videoGame of method App\\Model\\Entity\\Review::setVideoGame() expects App\\Model\\Entity\\VideoGame, array given.",
+                    "line": 81,
+                    "ignorable": true,
+                    "identifier": "argument.type"
+                },
+                {
+                    "message": "Cannot call method getReviews() on array.",
+                    "line": 89,
+                    "ignorable": true,
+                    "identifier": "method.nonObject"
+                },
+                {
+                    "message": "Parameter #1 $videoGame of method App\\Rating\\CalculateAverageRating::calculateAverage() expects App\\Model\\Entity\\VideoGame, array given.",
+                    "line": 92,
+                    "ignorable": true,
+                    "identifier": "argument.type"
+                },
+                {
+                    "message": "Parameter #1 $videoGame of method App\\Rating\\CountRatingsPerValue::countRatingsPerValue() expects App\\Model\\Entity\\VideoGame, array given.",
+                    "line": 93,
+                    "ignorable": true,
+                    "identifier": "argument.type"
+                }
+            ]
+        },
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/List/VideoGameList/Filter.php": {
+            "errors": 2,
+            "messages": [
+                {
+                    "message": "Method App\\List\\VideoGameList\\Filter::getTags() return type has no value type specified in iterable type array.",
+                    "line": 31,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type",
+                    "identifier": "missingType.iterableValue"
+                },
+                {
+                    "message": "Method App\\List\\VideoGameList\\Filter::setTags() has parameter $tags with no value type specified in iterable type array.",
+                    "line": 36,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type",
+                    "identifier": "missingType.iterableValue"
+                }
+            ]
+        },
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/List/VideoGameList/Pagination.php": {
+            "errors": 4,
+            "messages": [
+                {
+                    "message": "Return type (Traversable<string, int>) of method App\\List\\VideoGameList\\Pagination::getIterator() should be compatible with return type (Traversable<mixed, App\\Model\\ValueObject\\Page>) of method IteratorAggregate<mixed,App\\Model\\ValueObject\\Page>::getIterator()",
+                    "line": 72,
+                    "ignorable": true,
+                    "identifier": "method.childReturnType"
+                },
+                {
+                    "message": "Method App\\List\\VideoGameList\\Pagination::getIterator() should return Traversable<string, int> but returns ArrayIterator<(int|string), App\\Model\\ValueObject\\Page>.",
+                    "line": 78,
+                    "ignorable": true,
+                    "identifier": "return.type"
+                },
+                {
+                    "message": "Method App\\List\\VideoGameList\\Pagination::getDirections() return type has no value type specified in iterable type array.",
+                    "line": 105,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type",
+                    "identifier": "missingType.iterableValue"
+                },
+                {
+                    "message": "Method App\\List\\VideoGameList\\Pagination::getAllSorting() return type has no value type specified in iterable type array.",
+                    "line": 110,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type",
+                    "identifier": "missingType.iterableValue"
+                }
+            ]
+        },
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/List/VideoGameList/PaginationValueResolver.php": {
+            "errors": 1,
+            "messages": [
+                {
+                    "message": "Method App\\List\\VideoGameList\\PaginationValueResolver::resolve() return type has no value type specified in iterable type iterable.",
+                    "line": 17,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type",
+                    "identifier": "missingType.iterableValue"
+                }
+            ]
+        },
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/List/VideoGameList/VideoGamesList.php": {
+            "errors": 1,
+            "messages": [
+                {
+                    "message": "Property App\\List\\VideoGameList\\VideoGamesList::$routeParameters type has no value type specified in iterable type array.",
+                    "line": 36,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type",
+                    "identifier": "missingType.iterableValue"
+                }
+            ]
+        },
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/Model/Entity/VideoGame.php": {
+            "errors": 4,
+            "messages": [
+                {
+                    "message": "Property App\\Model\\Entity\\VideoGame::$tags with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types: TKey, T",
+                    "line": 85,
+                    "ignorable": true,
+                    "identifier": "missingType.generics"
+                },
+                {
+                    "message": "Property App\\Model\\Entity\\VideoGame::$reviews with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types: TKey, T",
+                    "line": 91,
+                    "ignorable": true,
+                    "identifier": "missingType.generics"
+                },
+                {
+                    "message": "Method App\\Model\\Entity\\VideoGame::getTags() return type with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types: TKey, T",
+                    "line": 221,
+                    "ignorable": true,
+                    "identifier": "missingType.generics"
+                },
+                {
+                    "message": "Method App\\Model\\Entity\\VideoGame::getReviews() return type with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types: TKey, T",
+                    "line": 229,
+                    "ignorable": true,
+                    "identifier": "missingType.generics"
+                }
+            ]
+        },
+        "/Users/chirdon/Documents/OpenClassrooms/critipixel/src/Security/Voter/VideoGameVoter.php": {
+            "errors": 1,
+            "messages": [
+                {
+                    "message": "Class App\\Security\\Voter\\VideoGameVoter extends generic class Symfony\\Component\\Security\\Core\\Authorization\\Voter\\Voter but does not specify its types: TAttribute, TSubject",
+                    "line": 10,
+                    "ignorable": true,
+                    "identifier": "missingType.generics"
+                }
+            ]
+        }
+    },
+    "errors": []
+}
