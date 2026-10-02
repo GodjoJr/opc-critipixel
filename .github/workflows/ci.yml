@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: ctype, iconv, intl, mbstring, pgsql, pdo_pgsql
+          tools: composer:v2
+
+      - name: Installer les dépendances
+        run: composer install --prefer-dist --no-progress --no-interaction
