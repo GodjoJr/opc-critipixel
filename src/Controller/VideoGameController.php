@@ -9,6 +9,7 @@ use App\List\ListFactory;
 use App\List\VideoGameList\Pagination;
 use App\Model\Entity\Review;
 use App\Model\Entity\VideoGame;
+use App\Model\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -42,7 +43,9 @@ final class VideoGameController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->denyAccessUnlessGranted('review', $videoGame);
             $review->setVideoGame($videoGame);
-            $review->setUser($this->getUser());
+            /** @var User $user */
+            $user = $this->getUser();
+            $review->setUser($user);
             $entityManager->persist($review);
             $entityManager->flush();
             return $this->redirectToRoute('video_games_show', ['slug' => $videoGame->getSlug()]);

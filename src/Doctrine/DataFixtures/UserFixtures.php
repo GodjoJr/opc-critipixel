@@ -5,6 +5,7 @@ namespace App\Doctrine\DataFixtures;
 use App\Model\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use phpDocumentor\Reflection\Types\Callable_;
 use function array_fill_callback;
 
 final class UserFixtures extends Fixture
